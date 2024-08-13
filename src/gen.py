@@ -1,7 +1,7 @@
 import random
 import string
 
-def generate_config():
+def generate_configuration_file():
     chars = string.ascii_letters + string.digits + string.punctuation
     with open("config.cfg", 'w') as file:
         char1 = char2 = ""
@@ -24,5 +24,5 @@ def generate_text_file():
             file.write(line + "\n")
 
 if __name__ == "__main__":
-    generate_config()
+    generate_configuration_file()
     generate_text_file()
