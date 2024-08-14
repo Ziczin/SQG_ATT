@@ -24,5 +24,5 @@ def generate_text_file(file_name: str):
             file.write(line + "\n")
 
 if __name__ == "__main__":
-    generate_configuration_file()
-    generate_text_file()
+    generate_configuration_file("config.cfg")
+    generate_text_file("text.txt")
