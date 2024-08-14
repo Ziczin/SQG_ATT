@@ -2,10 +2,10 @@ import random
 import string
 
 def generate_configuration_file():
-    chars = string.ascii_letters
+    chars = string.ascii_lowercase
     with open("config.cfg", 'w') as file:
         char1 = char2 = ""
-        for line_c in range(random.randint(2, 7)):
+        for line_c in range(random.randint(3, 10)):
             chars = chars.replace(char2, "")
             char1 = random.choice(chars)
 
@@ -15,11 +15,11 @@ def generate_configuration_file():
             file.write(char1 + "=" + char2 + "\n")
 
 def generate_text_file():
-    chars = string.ascii_letters*5 + string.digits + string.punctuation
+    chars = string.ascii_lowercase*15 + string.digits + string.punctuation
     with open("text.txt", 'w') as file:
-        for line_c in range(random.randint(5, 15)):
+        for line_c in range(random.randint(7, 15)):
             line = ""
-            for ch in range(random.randint(5, 15)):
+            for ch in range(random.randint(7, 15)):
                 line += random.choice(chars)
             file.write(line + "\n")
 
