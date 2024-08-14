@@ -24,12 +24,12 @@ if __name__ == "__main__":
     if args.genconf or args.genall:
         from gen import generate_configuration_file
         log("Generating configuration file")
-        generate_configuration_file
+        generate_configuration_file()
         
     if args.gentext or args.genall:
         from gen import generate_text_file
         log("Generating text file")
-        generate_text_file
+        generate_text_file()
     
     log()
     log("INPUT DATA")
