@@ -10,6 +10,7 @@ if __name__ == "__main__":
     parcer.add_argument("--genconf", action="store_true", help="Generating configuration file")
     parcer.add_argument("--gentext", action="store_true", help="Generating text file")
     parcer.add_argument("--genall", action="store_true", help="Generating all files")
+    parcer.add_argument("--showcount", action="store_true", help="show the number of substitutions")
 
     args = parcer.parse_args()
 
@@ -63,6 +64,10 @@ if __name__ == "__main__":
     data = sorted(data, key=lambda x: x[1], reverse=True)
     log("Sorted data: " + str(data))
 
+    log()
+    log("RESULT")
     for line in data:
+        if args.showcount or args.log:
+            print(str(line[1]) + " : ", end="")
         print(line[0])
 
