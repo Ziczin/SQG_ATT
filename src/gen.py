@@ -2,7 +2,7 @@ import random
 import string
 
 def generate_configuration_file():
-    chars = string.ascii_letters + string.digits + string.punctuation
+    chars = string.ascii_letters
     with open("config.cfg", 'w') as file:
         char1 = char2 = ""
         for line_c in range(random.randint(2, 7)):
@@ -15,7 +15,7 @@ def generate_configuration_file():
             file.write(char1 + "=" + char2 + "\n")
 
 def generate_text_file():
-    chars = string.ascii_letters + string.digits + string.punctuation
+    chars = string.ascii_letters*5 + string.digits + string.punctuation
     with open("text.txt", 'w') as file:
         for line_c in range(random.randint(5, 15)):
             line = ""
